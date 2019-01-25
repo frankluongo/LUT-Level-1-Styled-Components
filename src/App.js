@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Heading = styled.h1`
@@ -8,8 +8,8 @@ const Heading = styled.h1`
   font-size: 3rem;
 `;
 
-const buttonColor = (type) => {
-  return '#fff';
+const buttonColor = ({type}) => {
+  return type === 'cancel' ? 'tomato;' : '#fff';
 }
 
 const Button = styled.button`
@@ -20,19 +20,31 @@ const Button = styled.button`
   font-weight: bold;
   text-transform: uppercase;
 
-  background-color: ${({type}) => type === 'cancel' ? 'tomato;' : '#fff'};
+  background-color: ${buttonColor.bind(this)};
   border: 1px solid #eee;
   border-radius: 4px;
+  cursor: pointer;
+`;
+
+const AppWrapper = styled.div`
+  header {
+    background: teal;
+
+    &:hover {
+      background: red;
+    }
+  }
 `;
 
 class App extends Component {
   render() {
     return (
-      <Fragment>
+      <AppWrapper>
+        <header>Header</header>
         <Heading>Heading</Heading>
         <Button type="cancel">Button</Button>
         <Button type="save">Button</Button>
-      </Fragment>
+      </AppWrapper>
     );
   }
 }
