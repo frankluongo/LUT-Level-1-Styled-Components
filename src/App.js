@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { AppWrapper, Heading, Button, CancelButton, StyledFake, Fake } from './Styles/General';
+import { AppWrapper, Heading, Button, CancelButton, StyledFake, Fake } from './Styles/Components/General';
 
 class App extends Component {
   render() {
     return (
       <AppWrapper>
-        <header>Header</header>
         <Heading>Heading</Heading>
         <StyledFake />
         <Fake />

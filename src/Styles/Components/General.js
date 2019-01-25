@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { above } from './MediaQueries';
+import { above } from '../Global/MediaQueries';
+import { space } from '../Global/Variables';
 
 
 
@@ -11,7 +12,7 @@ export const Fake = ({ className }) => <div className={className}><h2>Yo!</h2></
 
 export const Heading = styled.h1`
   margin: 0;
-  padding: 15px;
+  padding: ${space('small')};
 
   font-size: 3rem;
   ${above.small`
@@ -43,7 +44,11 @@ export const CancelButton = styled(Button)`
 `;
 
 export const AppWrapper = styled.div`
-  padding: 15px;
+  padding: ${space('small')};
+
+  ${above.small`
+    padding: ${space('medium')};
+  `}
 
   ${Button} {
     margin-left: 20px;
