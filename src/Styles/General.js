@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { above } from './MediaQueries';
+
+
+
+
+
 export const Fake = ({ className }) => <div className={className}><h2>Yo!</h2></div>;
 
 export const Heading = styled.h1`
@@ -8,6 +14,9 @@ export const Heading = styled.h1`
   padding: 15px;
 
   font-size: 3rem;
+  ${above.small`
+    color: blue;
+  `}
 `;
 
 export const Button = styled.button`
