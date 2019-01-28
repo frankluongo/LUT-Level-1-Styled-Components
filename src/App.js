@@ -8,7 +8,7 @@ class App extends Component {
         <Heading>Heading</Heading>
         <StyledFake />
         <Fake />
-        <CancelButton type="cancel">Button</CancelButton>
+        <CancelButton type="cancel" top="100">Button</CancelButton>
         <Button type="save">Button</Button>
       </AppWrapper>
     );

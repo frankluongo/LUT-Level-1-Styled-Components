@@ -1,10 +1,23 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { above } from '../Global/MediaQueries';
 import { space } from '../Global/Variables';
 
+// CSS Helper
+// Useful for when you need to use a prop or variable value
+const fixedTop = css`
+  position: fixed;
+  top: ${({ top }) => top + 'px'};
+  left: 0;
+`;
 
+// This also works...
+// const fixedTop2 = `
+// position: fixed;
+// top: 0;
+// left: 0;
+// `;
 
 
 
@@ -37,6 +50,8 @@ export const Button = styled.button`
 
 export const CancelButton = styled(Button)`
   background-color: tomato;
+
+  /* ${fixedTop}; */
 
   &:hover {
     transform: scale(1.1);
