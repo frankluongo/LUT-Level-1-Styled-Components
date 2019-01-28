@@ -1,8 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { above } from '../Global/MediaQueries';
-import { space } from '../Global/Variables';
+import { above } from '../utilities/Breakpoints';
+import { space } from '../utilities/Variables';
 
 // CSS Helper
 // Useful for when you need to use a prop or variable value
@@ -22,16 +22,6 @@ const fixedTop = css`
 
 
 export const Fake = ({ className }) => <div className={className}><h2>Yo!</h2></div>;
-
-export const Heading = styled.h1`
-  margin: 0;
-  padding: ${space('small')};
-
-  font-size: 3rem;
-  ${above.small`
-    color: blue;
-  `}
-`;
 
 export const Button = styled.button`
   padding: 15px 30px;
