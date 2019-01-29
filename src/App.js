@@ -8,8 +8,9 @@ import Header from './layouts/Header';
 class App extends Component {
   render() {
     return (
+      <>
+      <Header />
       <AppWrapper>
-        <Header />
         <Heading>Heading</Heading>
         <StyledFake />
         <Fake />
@@ -17,6 +18,7 @@ class App extends Component {
         <Button type="save">Button</Button>
         <GlobalStyle />
       </AppWrapper>
+      </>
     );
   }
 }
