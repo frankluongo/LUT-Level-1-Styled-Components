@@ -1,3 +1,7 @@
+import { css } from 'styled-components';
+
+
+
 const SPACING_UNIT = 8;
 
 const spacing = {
@@ -19,3 +23,18 @@ export const space = (amount) => {
     console.log('that\'s not a valid space!')
   }
 }
+
+// CSS Helper
+// Useful for when you need to use a prop or variable value
+const fixedTop = css`
+  position: fixed;
+  top: ${({ top }) => top + 'px'};
+  left: 0;
+`;
+
+// This also works...
+// const fixedTop2 = `
+// position: fixed;
+// top: 0;
+// left: 0;
+// `;
