@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { black, social } from '../utilities/Colors';
+import elevation from '../utilities/Elevation';
+
 
 const Header = ({ className }) => {
   return (
@@ -22,7 +25,15 @@ const Header = ({ className }) => {
 export default styled(Header)`
   padding: 15px;
 
-  border-bottom: 1px solid #ccc;
+  /* background-color: ${black}; */
+  border-bottom: 2px solid ${social.twitter};
+
+  ${elevation[1]};
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    ${elevation[2]};
+  }
 
   .header__logo {
     width: 60px;

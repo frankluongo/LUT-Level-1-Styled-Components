@@ -26,6 +26,7 @@ export const space = (amount) => {
 
 // CSS Helper
 // Useful for when you need to use a prop or variable value
+// eslint-disable-next-line
 const fixedTop = css`
   position: fixed;
   top: ${({ top }) => top + 'px'};
