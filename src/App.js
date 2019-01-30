@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppWrapper, Heading, Button, CancelButton, StyledFake, Fake } from './elements';
+import { AppWrapper, Heading, Button, StyledFake, Fake } from './elements';
 import GlobalStyle from './elements/Global';
 import Header from './layouts/Header';
 
@@ -14,8 +14,9 @@ class App extends Component {
         <Heading>Heading</Heading>
         <StyledFake />
         <Fake />
-        <CancelButton type="cancel" top="100">Button</CancelButton>
+        <Button type="cancel" top="100">Button</Button>
         <Button type="save">Button</Button>
+        <Button type="save" size="small">Button</Button>
         <GlobalStyle />
       </AppWrapper>
       </>
