@@ -6,9 +6,11 @@ import { Button } from './Buttons';
 
 export const AppWrapper = styled.div`
   padding: ${space('small')};
+  padding-top: 90px;
 
   ${above.small`
     padding: ${space('medium')};
+    padding-top: 90px;
   `}
 
   ${Button} {

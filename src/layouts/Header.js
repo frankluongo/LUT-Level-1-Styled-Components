@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { black, social } from '../utilities/Colors';
 import elevation from '../utilities/Elevation';
+import { fixed } from '../utilities/Position';
 
 
 const Header = ({ className }) => {
@@ -23,6 +24,9 @@ const Header = ({ className }) => {
 // `;
 
 export default styled(Header)`
+  ${fixed()};
+
+  width: 100%;
   padding: 15px;
 
   /* background-color: ${black}; */
