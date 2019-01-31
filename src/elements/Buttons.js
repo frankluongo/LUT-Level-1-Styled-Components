@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import elevation from '../utilities/Elevation';
+import { lighten } from 'polished';
 
 const buttonSize = ({size}) => {
   let btnSizeProps;
@@ -48,7 +49,6 @@ export const Button = styled.button`
   ${buttonSize.bind(this)};
   ${buttonType.bind(this)};
 
-
   font-weight: bold;
   text-transform: uppercase;
 
@@ -60,5 +60,6 @@ export const Button = styled.button`
   &:hover {
     transform: scale(1.1);
     ${elevation[2]};
+    background-color: ${lighten(0.2, 'black')};
   }
 `;
