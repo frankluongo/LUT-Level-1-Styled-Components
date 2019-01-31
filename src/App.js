@@ -5,6 +5,8 @@ import Header from './layouts/Header';
 
 // Install The Polish Library for color functions
 // npm install --save polished
+// Install the Modifiers Library
+// npm install --save styled-components-modifiers
 
 
 class App extends Component {
@@ -16,9 +18,9 @@ class App extends Component {
         <Heading>Heading</Heading>
         <StyledFake />
         <Fake />
-        <Button type="cancel" top="100">Button</Button>
-        <Button type="save">Button</Button>
-        <Button type="save" size="small">Button</Button>
+        <Button modifiers={['typeCancel', 'sizeDefault']} top="100">Button</Button>
+        <Button modifiers={['typeStandard', 'sizeDefault']}>Button</Button>
+        <Button modifiers={['typeStandard', 'sizeSmall']}>Button</Button>
         <GlobalStyle />
       </AppWrapper>
       </>
