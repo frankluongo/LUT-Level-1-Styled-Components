@@ -21,9 +21,9 @@ export const Button = styled.button`
   ${elevation[1]};
 
   &:hover {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     ${elevation[2]};
-    background-color: ${lighten(0.2, 'black')};
+    /* background-color: ${lighten(0.2, 'black')}; */
   }
 
   ${applyStyleModifiers(BUTTON_MODIFIERS)};
