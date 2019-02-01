@@ -17,7 +17,6 @@ const spacing = {
 
 export const space = (amount) => {
   if (spacing[amount]) {
-    console.log(spacing[amount]);
     return spacing[amount];
   } else {
     console.log('that\'s not a valid space!')

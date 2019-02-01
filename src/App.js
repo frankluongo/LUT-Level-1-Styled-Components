@@ -3,16 +3,10 @@ import { AppWrapper, Heading, Button, StyledFake, Fake } from './elements';
 import GlobalStyle from './elements/Global';
 import Header from './layouts/Header';
 import { Card } from './elements/Cards';
-import { ThemeProvider } from 'styled-components';
+import styled from 'styled-components/macro';
 
-const theme = {
-  colors: {
-    red: '#e60000',
-    blue: '#3ec9ef',
-    black: '#212121',
-    white: '#f1f1f1'
-  }
-};
+// CSS Prop
+// npm install --save-dev babel-plugin-styled-components babel-plugin-macros
 
 class App extends Component {
   render() {
@@ -21,6 +15,15 @@ class App extends Component {
         <Header />
         <AppWrapper>
           <Heading>Heading</Heading>
+          <div
+            css={`
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: red;
+            `}
+          >
+            Hello
+          </div>
           <Card>
             <p>This is a card</p>
             <Card.Button modifiers={['typeStandard', 'sizeDefault']}>Button</Card.Button>
