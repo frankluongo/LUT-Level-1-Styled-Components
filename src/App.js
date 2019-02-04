@@ -26,7 +26,7 @@ class App extends Component {
           </div>
           <Card>
             <p>This is a card</p>
-            <Card.Button modifiers={['typeStandard', 'sizeDefault']}>Button</Card.Button>
+            <Card.Button as="a" modifiers={['typeStandard', 'sizeDefault']}>Button</Card.Button>
           </Card>
           <StyledFake />
           <Fake />

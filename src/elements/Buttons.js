@@ -13,6 +13,7 @@ const BUTTON_MODIFIERS = {
 export const Button = styled.button`
 
   font-weight: bold;
+  text-align: center;
   text-transform: uppercase;
 
   border-radius: 4px;
@@ -28,3 +29,6 @@ export const Button = styled.button`
 
   ${applyStyleModifiers(BUTTON_MODIFIERS)};
 `;
+
+// Old Way of making a Styled Component out of something
+// const LinkButton = CancelButton.withComponent('a');
