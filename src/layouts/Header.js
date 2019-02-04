@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import { black, social } from '../utilities/Colors';
 import elevation from '../utilities/Elevation';
 import { fixed } from '../utilities/Position';
-
+import Navigation from '../elements/Navigation';
 
 const Header = ({ className }) => {
   return (
     <header className={className}>
       <img src="https://placekitten.com/200/200" alt="Kittens!" className="header__logo" />
+      <Navigation />
     </header>
   )
 }
@@ -25,6 +26,12 @@ const Header = ({ className }) => {
 
 export default styled(Header)`
   ${fixed()};
+
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-gap: 15px;
+
+  align-items: center;
 
   width: 100%;
   padding: 15px;

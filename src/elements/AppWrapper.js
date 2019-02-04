@@ -5,6 +5,9 @@ import { above } from '../utilities/Breakpoints';
 import { Button } from './Buttons';
 
 export const AppWrapper = styled.div`
+  margin: 0 auto;
+  max-width: 1200px;
+
   padding: ${space('small')};
   padding-top: 90px;
 
